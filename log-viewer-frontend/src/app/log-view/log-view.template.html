@@ -284,6 +284,14 @@
         <lv-event-details [record]="recordWithDetails"></lv-event-details>
     </div>
 
+    <div *ngSwitchCase="'json-details'" class="sl-dialog sl-dialog-big p-2" style="overflow-y: scroll;">
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-link" (click)="modalWindow = null">Close</button>
+        </div>
+
+        <lv-json-details [record]="recordWithDetails"></lv-json-details>
+    </div>
+
     <div *ngSwitchCase="'open-log'" class="sl-dialog sl-dialog-big p-2" style="overflow-y: scroll;">
         <div class="d-flex justify-content-end">
             <button class="btn btn-link" (click)="modalWindow = null">Close</button>
@@ -349,5 +357,9 @@
 
     <ng-template contextMenuItem (execute)="showEventDetails($event.item.record)">
         Event details
+    </ng-template>
+
+    <ng-template contextMenuItem (execute)="showJsonDetails($event.item.record)">
+        View Json
     </ng-template>
 </context-menu>

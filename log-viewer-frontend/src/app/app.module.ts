@@ -19,6 +19,7 @@ import {TopFilterListComponent} from './log-view/top-filters/top-filter-list/top
 import {LevelListComponent} from './log-view/top-filters/level-list/level-list.component';
 import {ExceptionOnlyComponent} from '@app/log-view/top-filters/exception-only/exception-only.component';
 import {EventDetailsComponent} from '@app/log-view/event-details/event-details.component';
+import {JsonDetailsComponent} from '@app/log-view/json-details/json-details.component';
 import {FileStatusComponent} from '@app/log-view/file-status/file-status.component';
 import {ContextMenuModule} from 'ngx-contextmenu';
 import {LvDateIntervalComponent} from '@app/log-view/top-filters/date-interval/date-interval.component';
@@ -85,6 +86,7 @@ export const appRoutes: Routes = [
         LogViewComponent,
         LogListPanelComponent,
         EventDetailsComponent,
+        JsonDetailsComponent,
         DownloadDialogComponent,
         FileStatusComponent,
         SwitcherComponent,

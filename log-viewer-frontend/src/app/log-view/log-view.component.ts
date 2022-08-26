@@ -233,6 +233,11 @@ export class LogViewComponent implements OnInit, OnDestroy, AfterViewChecked, Ba
         this.modalWindow = 'event-details';
     }
 
+    showJsonDetails(record: Record) {
+        this.recordWithDetails = record;
+        this.modalWindow = 'json-details';
+    }
+
     clickRecord(event: MouseEvent) {
         if (this.state !== State.STATE_OPENED || this.modalWindow != null) { return; }
 

@@ -1,6 +1,7 @@
 <div #panelDropDown class="top-panel-dropdown lv-dropdown-panel-holder closeable-filter"
      [attr.filter-id]="filterId">
 
+    <input id="hide-unmatched" type="checkbox" [(ngModel)]="enabled" (ngModelChange)="enableDisable()">
     <span (click)="toggleFilterPanel()"
           [class.disabled-filter]="!enabled"
           [class.modified]="hasChanges()">
